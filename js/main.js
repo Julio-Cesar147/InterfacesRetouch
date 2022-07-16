@@ -10,7 +10,7 @@ ham.addEventListener('click', () => {
     })
 })
 
-/* Modal del Formulario para agregar talleres / Se pueden utilizar tambien para las alertas */
+/* Modal del Formulario */
 let btn = document.getElementById("btn-add")
 let cont = document.getElementById("modal-container")
 btn.addEventListener("click", () => {
@@ -18,39 +18,59 @@ btn.addEventListener("click", () => {
     <div class="modal" id ="modal">
         <div class="modal-content">
             <button class="btn-closed" id = "btn-closed">X</button>
-            <div class="contenedor">
-                <div class="centro">
-                    <h1>Agregar un Nuevo Taller</h1>
-                    <form action="aqui va adonde va a dirigir el formulario" method="post">
-                    <div class="campotexto">
-                        <input type="text" name="name-taller" required>
-                        <span></span>
-                        <label>Nombre del Taller</label>
+            <form action="" class="form" id="form">
+                <!-- Grupo Nombre Taller -->
+                <div class="form-group" id="group-name-wks">
+                    <label for="workshop" class="form-label">Nombre del Taller</label>
+                    <div class="form-group-input">
+                        <input type="text" class="form-input" name="workshop" id="workshop" placeholder="Futbol">
                     </div>
-                    <div class="campotexto">
-                        <input type="text" name="teacher" required>
-                        <span></span>
-                        <label>Docente</label>
-                    </div>
-                    <div class="campotexto">
-                        <input type="text" name="spacio" required>
-                        <span></span>
-                        <label>Espacio</label>
-                    </div>
-                    <div class="campotexto">
-                        <input type="text" name="type-taller" required>
-                        <span></span>
-                        <label>Tipo de Taller</label>
-                    </div>
-                    <div class="campotexto">
-                        <input type="text" name="hour" required>
-                        <span></span>
-                        <label>Horario</label>
-                    </div>
-                    <input name="submit" type="submit" value="Agregar Taller">
-                    </form>
+                    <p class="form-input-error">El nombre de taller solo puede contener letras</p>
                 </div>
-            </div>
+
+                <!-- Grupo Nombre Docente -->
+                <div class="form-group" id="group-teacher">
+                    <label for="teacher" class="form-label">Nombre del Docente</label>
+                    <div class="form-group-input">
+                        <input type="text" class="form-input" name="teacher" id="teacher" placeholder="Fulanito de Tal">
+                    </div>
+                    <p class="form-input-error">El nombre del Docente solo puede contener letras</p>
+                </div>
+
+                <!-- Grupo Lugar -->
+                <div class="form-group" id="group-space">
+                    <label for="space" class="form-label">Espacio/Lugar</label>
+                    <div class="form-group-input">
+                        <input type="text" class="form-input" name="space" id="space" placeholder="Canchitas">
+                    </div>
+                    <p class="form-input-error">El nombre del Lugar solo puede contener letras</p>
+                </div>
+
+                <!-- Grupo Tipo de Taller -->
+                <div class="form-group" id="group-type-wks">
+                    <label for="type-wks" class="form-label">Tipo de Taller</label>
+                    <div class="form-group-input">
+                        <input type="text" class="form-input" name="type-wks" id="type-wks" placeholder="Cultural">
+                    </div>
+                    <p class="form-input-error">El nombre de taller solo puede contener letras</p>
+                </div>
+
+                <!-- Grupo Horario -->
+                <div class="form-group" id="group-hour">
+                    <label for="workshop" class="form-label">Horario</label>
+                    <div class="form-group-input">
+                        <input type="text" class="form-input" name="hour" id="hour" placeholder="11:00 - 13:00">
+                    </div>
+                    <p class="form-input-error">Solo se aceptan numeros y guiones medios</p>
+                </div>
+
+                <div class="form-message" id="form-message">
+                    <p>Por Favor rellena todos los campos del Formulario</p>
+                </div>
+                <div class="form-group form-btn-enviar">
+                    <button type="submit" class="form-btn">Agregar Taller</button>
+                </div>
+            </form>
         </div>
     </div>`
 

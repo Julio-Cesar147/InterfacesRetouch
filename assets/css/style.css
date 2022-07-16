@@ -75,7 +75,7 @@ nav {
     background-color: rgb(62, 130, 197);
 }
 
-@media (max-width:768px) {
+@media (max-width:800px) {
     body {
         overflow: hidden;
     }
