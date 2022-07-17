@@ -124,7 +124,7 @@ tr:hover td{
     display: none;
 }
 
-.form-input-error.active{
+.form-input-error-active{
     display: block;
 }
 
@@ -137,7 +137,7 @@ tr:hover td{
     display: none;
 }
 
-.form-message.activo{
+.form-message-activo{
     display: block;
 }
 
